@@ -1,0 +1,30 @@
+// Note this Calculator is only for integer values
+import java.util.*;
+
+public class Calculator {
+    public static void main(String[] args) {
+        
+         
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        String y = sc.next();   
+        int z = sc.nextInt();
+        if (z == 0 && y.equals("/")) {
+            System.out.println("Cannot divide by zero");
+            return;
+        }
+        if (y.equals("+")) {
+            System.out.println(x + z);
+        } else if (y.equals("-")) {
+            System.out.println(x - z);
+        } else if (y.equals("*")) {
+            System.out.println(x * z);
+        } else if (y.equals("/")) {
+            System.out.println(x / z);
+        } else if (y.equals("%")) {
+            System.out.println(x % z);
+        } else {
+            System.out.println("Invalid Operator :)"); 
+        }
+    }
+}
